@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>I am a React Developer</p>
+        <MovieCounter></MovieCounter>
         {/* <Product products={products[0]}></Product> */}
         {/* <Product price={}></Product> */}
         <Counter></Counter>
@@ -40,6 +40,16 @@ function App() {
     </div>
   );
 }
+
+function MovieCounter(){
+  const [count, setCount] = useState(0)
+  return(
+    <div>
+      <button onClick={() => setCount(count + 1)}>Add Movie</button>
+      <h5>Number of Movies:{count} </h5>
+    </div>
+  )
+} 
 // react hook means its change the useState value
 // setCount used for set a new value by user 
 function Counter(){
